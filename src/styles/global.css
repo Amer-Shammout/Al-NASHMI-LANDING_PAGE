@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "./variables.css";
+@import "./base.css";
+
+/* إعداد الخطوط */
+@font-face {
+  font-family: "Tajwal";
+  src: url("../assets/fonts/Tajawal-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tajwal";
+  src: url("../assets/fonts/Tajawal-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tajwal";
+  src: url("../assets/fonts/Tajawal-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}

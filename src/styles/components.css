@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply text-white font-bold text-[24px] w-52 py-[12px] rounded-[24px] cursor-pointer
+    hover:bg-[#53362E] 
+    transition-colors duration-300 ease-in;
+    background-color: var(--color-primary);
+    mix-blend-mode: hard-light;
+  }
+
+  .btn-outline {
+    @apply font-bold text-[24px] w-52 py-3 rounded-3xl cursor-pointer
+           border-2 border-[var(--color-primary)] text-[var(--color-primary)]
+           hover:bg-[var(--color-primary)] 
+           hover:text-[var(--color-white)] 
+           transition-colors duration-300 ease-in;
+
+    background-color: transparent;
+    mix-blend-mode: hard-light;
+  }
+}

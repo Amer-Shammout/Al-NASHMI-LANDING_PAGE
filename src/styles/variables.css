@@ -1,0 +1,15 @@
+:root {
+  /* 🎨 ألوان العلامة */
+  --color-primary: #3E2620;
+  --color-secondary: #95877E;
+  --color-paragraph: #121212;
+  --color-white: #DEDEDE;
+
+  /* ✍️ الخطوط */
+  --font-main: "Tajwal", sans-serif;
+  --font-accent: "Cairo", sans-serif;
+
+  /* 📏 المسافات */
+  --spacing-section: 5rem;
+  --radius-card: 1rem;
+}
