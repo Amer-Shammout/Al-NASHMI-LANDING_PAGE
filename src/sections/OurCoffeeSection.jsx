@@ -33,7 +33,7 @@ export default function OurCoffeeSection() {
       </div>
       <img
         src={spoon}
-        className="-z-1000 left-0 -bottom-30  absolute w-[70px] "
+        className="-z-1000 left-0 -bottom-10  absolute w-[50px] "
         loading="lazy"
       />
     </section>

@@ -37,7 +37,7 @@ export default function Footer() {
         />
       </a>
 
-      <div className="flex gap-20 items-center">
+      <div className="flex justify-between w-full sm:w-fit sm:gap-16 items-center">
         <a
           href="#hero"
           className="navLink"
