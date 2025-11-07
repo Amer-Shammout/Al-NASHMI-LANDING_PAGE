@@ -1,8 +1,8 @@
 import React from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { CONTACT_DATA } from "../constants/contact";
-import beans from "../assets/images/beans.png"
-
+import beans from "../assets/images/beans.png";
+import AnimatedSection from "../components/AnimatedSection";
 
 // خريطة الأيقوانات
 const iconMap = {
@@ -57,25 +57,32 @@ export default function ContactSection() {
 
   return (
     <section className="px-8  lg:px-[100px] py-8 relative" id="contact">
-      <div className="bg-(--color-secondary) w-full shadow-[0_4px_10px_#1E0E0A] mix-blend-hard-light flex flex-col justify-center items-center gap-8 lg:py-8 md:py-8 py-4 rounded-2xl relative overflow-hidden">
-        {/* تأثير إضاءة خلفية */}
-        <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80">
-          <div className="absolute inset-0 bg-radial-gradient from-(--color-primary)/10 via-transparent to-transparent rounded-full blur-3xl"></div>
-        </div>
+      <AnimatedSection direction="none" delay={0.2}>
+        {" "}
+        <div className="bg-(--color-secondary) w-full shadow-[0_4px_10px_#1E0E0A] mix-blend-hard-light flex flex-col justify-center items-center gap-8 lg:py-8 md:py-8 py-4 rounded-2xl relative overflow-hidden">
+          {/* تأثير إضاءة خلفية */}
+          <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80">
+            <div className="absolute inset-0 bg-radial-gradient from-(--color-primary)/10 via-transparent to-transparent rounded-full blur-3xl"></div>
+          </div>
 
-        {/* العنوان والوصف */}
-        <div className="flex flex-col gap-2 text-center relative z-10">
-          <h3>{CONTACT_DATA.subtitle}</h3>
-          <h1>{CONTACT_DATA.title}</h1>
-        </div>
+          {/* العنوان والوصف */}
+          <div className="flex flex-col gap-2 text-center relative z-10">
+            <h3>{CONTACT_DATA.subtitle}</h3>
+            <h1>{CONTACT_DATA.title}</h1>
+          </div>
 
-        {/* قائمة معلومات التواصل - معدلة لـ Wrap */}
-        <div className="flex flex-wrap justify-center gap-4 w-full px-4 relative z-10 max-w-6xl mx-auto">
-          {contactList}
+          {/* قائمة معلومات التواصل - معدلة لـ Wrap */}
+          <div className="flex flex-wrap justify-center gap-4 w-full px-4 relative z-10 max-w-6xl mx-auto">
+            {contactList}
+          </div>
         </div>
-      </div>
-      <img src={beans} className="-z-1000 -right-30 -bottom-10 mix-blend-soft-light  absolute w-md" />
+      </AnimatedSection>
 
+      <img
+        src={beans}
+        className="-z-1000 -right-30 -bottom-10 mix-blend-soft-light  absolute w-md"
+        loading="lazy"
+      />
     </section>
   );
 }

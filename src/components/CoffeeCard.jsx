@@ -10,6 +10,7 @@ export default function CoffeeCard({ data }) {
           src={image}
           alt={title}
           className="w-32 sm:w-36 lg:w-40 object-contain"
+          loading="lazy"
         />
       </div>
 

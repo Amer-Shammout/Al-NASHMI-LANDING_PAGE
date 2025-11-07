@@ -7,6 +7,8 @@ import heroImg from "../assets/images/hero_img.png";
 import { HERO_DATA } from "../constants/hero";
 import { useCallback } from "react";
 import beans from "../assets/images/beans.png";
+import AnimatedSection from "../components/AnimatedSection";
+import AnimatedImage from "../components/AnimatedImage";
 
 export default function HeroSection() {
   const smoothScrollTo = useCallback((sectionId) => {
@@ -26,35 +28,40 @@ export default function HeroSection() {
       <img
         src={beans}
         className="-z-1000 -right-20 -top-30 absolute w-md mix-blend-soft-light"
+        loading="lazy"
       />
 
       <div className="flex justify-between items-center   flex-col-reverse md:flex-row gap-8 ">
         {/* النص والأزرار */}
-        <div className="flex flex-col gap-6 items-center">
-          <h3 className="text-center ">{HERO_DATA.title}</h3>
-          <Logo
-            blendMode="hard-light"
-            className="block w-[200px]  lg:w-[422px] h-20 sm:h-[100px] lg:h-[147px] mb-2"
-          />
+        <AnimatedSection direction="left" delay={0.2}>
+          <div className="flex flex-col gap-6 items-center">
+            <h3 className="text-center ">{HERO_DATA.title}</h3>
+            <Logo
+              blendMode="hard-light"
+              className="block w-[200px]  lg:w-[422px] h-20 sm:h-[100px] lg:h-[147px] mb-2"
+            />
 
-          <div className="flex gap-2">
-            <button
-              className="btn-primary"
-              onClick={() => smoothScrollTo("coffee-types")}
-            >
-              اطلب الآن
-            </button>
-            <button
-              className="btn-outline"
-              onClick={() => smoothScrollTo("about")}
-            >
-              المزيد
-            </button>
+            <div className="flex gap-2">
+              <button
+                className="btn-primary"
+                onClick={() => smoothScrollTo("coffee-types")}
+              >
+                اطلب الآن
+              </button>
+              <button
+                className="btn-outline"
+                onClick={() => smoothScrollTo("about")}
+              >
+                المزيد
+              </button>
+            </div>
           </div>
-        </div>
+        </AnimatedSection>
 
         {/* الصورة */}
-        <img
+        <AnimatedImage
+          direction="right"
+          delay={0.2}
           src={heroImg}
           alt="قهوة عربية"
           className=" w-[200px] sm:w-[250px] md:w-[400px]"

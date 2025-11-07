@@ -133,7 +133,7 @@ export default function Header() {
         </nav>
 
         <button
-          className="xl:hidden text-3xl text-white cursor-pointer hover:text-(--color-primary) transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:ring-opacity-50 rounded-md"
+          className="xl:hidden text-3xl text-white cursor-pointer hover:text-(--color-primary) transition-colors duration-300  rounded-md"
           onClick={toggleMenu}
           aria-label={isOpen ? "إغلاق القائمة" : "فتح القائمة"}
           aria-expanded={isOpen}
@@ -143,11 +143,11 @@ export default function Header() {
       </div>
 
       <div
-        className={`absolute left-0 top-full w-full overflow-hidden transition-all duration-500 ease-in-out backdrop-blur-lg ${
+        className={`absolute left-0 top-full w-full overflow-hidden transition-all duration-500 ease-in-out  ${
           isOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="flex flex-col items-center gap-4 bg-[rgba(96,96,96,0.3)] backdrop-blur-lg py-4 rounded-b-xl border-t border-white/20">
+        <div className="flex flex-col items-center gap-4 bg-[rgba(96,96,96,0.2)]  py-4 rounded-b-xl ">
           {renderNavLinks(true)}
         </div>
       </div>

@@ -69,10 +69,10 @@ export default function Footer() {
       </div>
 
       <div className="flex justify-between items-center gap-2">
-        <img src={telegram} />
-        <img src={x} />
-        <img src={facebook} />
-        <img src={instagram} />
+        <img src={telegram} loading="lazy" />
+        <img src={x} loading="lazy" />
+        <img src={facebook} loading="lazy" />
+        <img src={instagram} loading="lazy" />
       </div>
     </footer>
   );
