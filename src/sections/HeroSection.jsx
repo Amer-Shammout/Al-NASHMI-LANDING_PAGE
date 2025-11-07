@@ -6,33 +6,35 @@ import heroImg from "../assets/images/hero_img.png";
 
 import { HERO_DATA } from "../constants/hero";
 
-
 export default function HeroSection() {
   return (
-    <div className="flex justify-between items-center xl:mx-[100px]  flex-col-reverse md:flex-row gap-8">
-      {/* النص والأزرار */}
-      <div className="flex flex-col gap-6 items-center md:items-center">
-        <h3 className="text-center ">
-          {HERO_DATA.title}
-        </h3>
-        <Logo
-          width="422px"
-          height="147px"
-          blendMode="hard-light"
-          className="mb-2"
-        />
-        <div className="flex gap-2">
-          <button className="btn-primary">اطلب الآن</button>
-          <button className="btn-outline">المزيد</button>
-        </div>
-      </div>
+    <section
+      className=" py-8  md:px-8 sm:px-4  xl:mx-[100px]"
+      id="hero"
+      aria-label="قسم المقدمة - القهوة العربية الأصيلة"
+    >
+      <div className="flex justify-between items-center   flex-col-reverse md:flex-row gap-8 ">
+        {/* النص والأزرار */}
+        <div className="flex flex-col gap-6 items-center">
+          <h3 className="text-center ">{HERO_DATA.title}</h3>
+          <Logo
+            blendMode="hard-light"
+            className="block w-[200px]  lg:w-[422px] h-20 sm:h-[100px] lg:h-[147px] mb-2"
+          />
 
-      {/* الصورة */}
-      <img
-        src={heroImg}
-        alt="قهوة عربية"
-        className="w-full max-w-sm md:max-w-md"
-      />
-    </div>
+          <div className="flex gap-2">
+            <button className="btn-primary">اطلب الآن</button>
+            <button className="btn-outline">المزيد</button>
+          </div>
+        </div>
+
+        {/* الصورة */}
+        <img
+          src={heroImg}
+          alt="قهوة عربية"
+          className=" w-[200px] sm:w-[250px] md:w-[400px]"
+        />
+      </div>
+    </section>
   );
 }

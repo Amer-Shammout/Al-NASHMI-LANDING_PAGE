@@ -6,20 +6,27 @@
   }
 
   .btn-primary {
-    @apply text-white font-bold text-[24px] w-52 py-[12px] rounded-[24px] cursor-pointer
-    hover:bg-[#53362E] 
+    @apply text-white font-bold text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px]
+    w-40 sm:w-44 md:w-48 lg:w-52
+    py-2 sm:py-2.5 md:py-3
+    rounded-3xl cursor-pointer
+    sm:rounded-xl
+    hover:bg-[#53362E]
     transition-colors duration-300 ease-in;
     background-color: var(--color-primary);
     mix-blend-mode: hard-light;
   }
 
   .btn-outline {
-    @apply font-bold text-[24px] w-52 py-3 rounded-3xl cursor-pointer
-           border-2 border-[var(--color-primary)] text-[var(--color-primary)]
-           hover:bg-[var(--color-primary)] 
-           hover:text-[var(--color-white)] 
-           transition-colors duration-300 ease-in;
-
+    @apply font-bold text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px]
+    w-40 sm:w-48 md:w-52
+    py-2 sm:py-2.5 md:py-3
+    rounded-3xl cursor-pointer
+    sm:rounded-xl
+    border-2 border-(--color-primary) text-(--color-primary)
+    hover:bg-(--color-primary)
+    hover:text-white
+    transition-colors duration-300 ease-in;
     background-color: transparent;
     mix-blend-mode: hard-light;
   }

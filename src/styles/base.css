@@ -12,35 +12,37 @@
   }
 
   h1 {
-    font-size: 64px;
-    line-height: 38px;
+    font-size: clamp(2rem, 4vw + 1rem, 4rem); /* من 32px إلى 64px تقريبًا */
+    line-height: 1.2;
     font-weight: 800;
     mix-blend-mode: hard-light;
     color: var(--color-primary);
   }
-
+  
   h3 {
-    font-size: 1.5rem !important;
-    line-height: normal !important;
-    font-weight: 700 !important;
+    font-size: clamp(1rem, 1vw + 0.75rem, 1.75rem) !important; /* من 20px إلى 28px */
+    line-height: 1.4;
+    font-weight: 700;
     color: var(--color-paragraph);
   }
-
+  
   p {
-    font-size: 24px;
-    line-height: normal;
+    font-size: clamp(1rem, 0.8vw + 0.75rem, 1.5rem); /* من 16px إلى 24px */
+    line-height: 1.5;
     font-weight: 500;
     color: var(--color-paragraph);
   }
-
+  
   a {
-    font-size: 20px !important;
+    font-size: clamp(1rem, 0.5vw + 0.75rem, 1.25rem); /* من 16px إلى 20px */
     font-weight: 500;
     color: var(--color-white) !important;
     transition: all 0.15s ease-in;
   }
+  
   a:hover {
     color: var(--color-primary) !important;
-    font-weight: 700 !important;
+    font-weight: 700;
   }
+  
 }
