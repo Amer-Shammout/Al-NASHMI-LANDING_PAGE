@@ -5,7 +5,7 @@ export default function MainLayout({ children }) {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1">
+      <main className="flex-1 pt-24  xl:pt-32 ">
         {children}  {/* هنا توضع الأقسام مثل HeroSection, AboutSection ... */}
       </main>
       

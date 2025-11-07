@@ -1,16 +1,52 @@
 // src/components/Header/Header.jsx
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi"; // أيقونات الهامبورجر (react-icons)
 import Logo from "./Logo";
 
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  useEffect(() => {
+    let ticking = false;
+    let animationFrameId = null;
+    
+    const handleScroll = () => {
+      if (!ticking) {
+        animationFrameId = requestAnimationFrame(() => {
+          // منطق السكرول هنا
+          if (window.scrollY > 80) {
+            setIsScrolled(true);
+          } else {
+            setIsScrolled(false);
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
+  }, []);
+
   return (
-    <header className="relative w-full px-4 py-4 sm:px-8 sm:py-6 xl:px-[100px] xl:py-[40px] bg-[rgba(96,96,96,0.2)] fixed top-0 z-50">
+    <header className={`fixed top-0 z-50 w-full w-full px-4 py-4 sm:px-8 sm:py-6 xl:px-[100px] xl:py-[40px] transition-all duration-300 ${
+  isScrolled 
+    ? 'bg-[rgba(96,96,96,0.2)] backdrop-blur-sm shadow-lg' 
+    : 'bg-[rgba(96,96,96,0.2)]'
+}`}>
       <div className="flex items-center justify-between">
         <nav className="flex items-center justify-between flex-1">
           <a href="#home" className="hidden xl:inline">

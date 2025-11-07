@@ -1,11 +1,10 @@
 import React from "react";
 
 export default function SectionDetails({ data }) {
-  // destructure البيانات من props
   const { title, subtitle, desc } = data;
 
   return (
-    <div className="flex flex-col gap-2 text-center sm:text-center md:text-start">
+    <div className="relative flex flex-col gap-2 text-center sm:text-center md:text-start">
       {/* العنوان الفرعي */}
       <h3>{subtitle}</h3>
 
