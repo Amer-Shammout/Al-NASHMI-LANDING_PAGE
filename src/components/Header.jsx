@@ -42,23 +42,25 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-0 z-50 w-full px-4 py-4 sm:px-8 sm:py-6 xl:px-[100px] xl:py-[40px] transition-all duration-300 ${
+    <header className={`fixed top-0 z-50 w-full px-4 py-4 sm:px-8 sm:py-6 xl:px-[100px] xl:py-10 transition-all duration-300 ${
   isScrolled 
     ? 'bg-[rgba(96,96,96,0.2)] backdrop-blur-sm shadow-lg' 
     : 'bg-[rgba(96,96,96,0.2)]'
 }`}>
+
+
       <div className="flex items-center justify-between">
         <nav className="flex items-center justify-between flex-1">
-          <a href="#home" className="hidden xl:inline">
+          <a href="#hero" className="hidden xl:inline">
             الرئيسية
           </a>
-          <a href="#coffee" className="hidden xl:inline">
+          <a href="#our-coffee" className="hidden xl:inline">
             قهوتنا
           </a>
 
           {/* Logo in the center */}
           <a href="#hero">
-            <Logo width="120px" />
+            <Logo width="120px" className="transition-transform duration-300 hover:scale-102 cursor-pointer" />
           </a>
 
           <a href="#about" className="hidden xl:inline">
@@ -71,7 +73,7 @@ export default function Header() {
 
         {/* Hamburger icon */}
         <button
-          className="xl:hidden text-3xl text-[var(--color-white)] cursor-pointer"
+          className="xl:hidden text-3xl text-white cursor-pointer"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >

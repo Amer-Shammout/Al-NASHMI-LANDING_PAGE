@@ -5,6 +5,8 @@ import "../styles/components.css";
 import heroImg from "../assets/images/hero_img.png";
 
 import { HERO_DATA } from "../constants/hero";
+import beans from "../assets/images/beans.png"
+
 
 export default function HeroSection() {
   return (
@@ -13,6 +15,8 @@ export default function HeroSection() {
       id="hero"
       aria-label="قسم المقدمة - القهوة العربية الأصيلة"
     >
+        <img src={beans} className="-z-1000 -right-20 -top-30 absolute w-md mix-blend-soft-light" />
+
       <div className="flex justify-between items-center   flex-col-reverse md:flex-row gap-8 ">
         {/* النص والأزرار */}
         <div className="flex flex-col gap-6 items-center">

@@ -4,7 +4,7 @@ export default function CoffeeCard({ data }) {
   const { title, price, image } = data;
 
   return (
-    <div className=" relative bg-[var(--color-secondary)]  w-full shadow-[0_4px_10px_#1E0E0A] mix-blend-hard-light transition-transform duration-300 hover:scale-102 cursor-pointer">
+    <div className=" relative bg-(--color-secondary)  w-full shadow-[0_4px_10px_#1E0E0A] mix-blend-hard-light transition-transform duration-300 hover:scale-102 cursor-pointer">
       <div className="absolute top-[-50%] left-1/2 transform -translate-x-1/2">
         <img
           src={image}

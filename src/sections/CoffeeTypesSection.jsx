@@ -2,12 +2,13 @@ import React from "react";
 import CoffeeCard from "../components/CoffeeCard";
 
 import { COFFEE_TYPES_DATA, COFFEE_CARDS } from "../constants/coffee_types";
+import beans from "../assets/images/beans.png";
 
 export default function CoffeeTypesSection() {
   return (
     <section
       id="coffee-types"
-      className="py-8 px-4 sm:px-4 md:px-8 lg:px-[100px] flex flex-col items-center gap-12"
+      className="relative py-8 px-4 sm:px-4 md:px-8 lg:px-[100px] flex flex-col items-center gap-12"
     >
       <div className="flex flex-col gap-2 text-center ">
         <h3>{COFFEE_TYPES_DATA.subtitle}</h3>
@@ -21,6 +22,7 @@ export default function CoffeeTypesSection() {
       </div>
 
       <button className="btn-primary ">المزيد</button>
+      <img src={beans} className="-z-1000 -right-30 -bottom-30  absolute w-md mix-blend-soft-light" />
     </section>
   );
 }
