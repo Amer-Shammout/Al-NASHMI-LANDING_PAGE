@@ -1,7 +1,6 @@
 import React from "react";
 import SectionDetails from "../components/SectionDetails";
 
-import spoonImg from "../assets/images/our-coffee-photo.png";
 
 import { OUR_COFFEE_DATA } from "../constants/our_coffee";
 
@@ -14,7 +13,7 @@ export default function OurCoffeeSection() {
     >
       <div className="flex justify-between items-center flex-col md:flex-row">
         <img
-          src={spoonImg}
+          src={OUR_COFFEE_DATA.image}
           alt="ملعقة قهوة تدخل من يمين الشاشة"
           className="object-contain md:w-1/2 sm:translate-x-40 translate-x-28 md:translate-0 sm:relative"
         />
