@@ -70,25 +70,23 @@ export default function Header() {
   // دالة محسنة للكلاسات - الحل الجذري
   const getNavLinkClasses = (sectionId) => {
     const isActive = activeSection === sectionId;
-
+  
     return [
-      "nav-link", // لاستبعاد CSS العام
+      "nav-link",
       "transition-all",
       "!duration-300",
       "ease-in",
-      // إعادة تعيين كل أنماط CSS العام بالقوة
       "!text-base",
       "!text-[18px]",
       "hover:!text-white",
       "hover:!font-bold",
       "hover:!mix-blend-normal",
-
-      // الحالة النشطة
       isActive
-        ? "!text-[var(--color-white)] !font-bold"
-        : "!text-white !font-normal mix-blend-soft-light",
+        ? "!text-[var(--color-white)] !font-bold opacity-100"
+        : "!text-white !font-normal mix-blend-soft-light opacity-70 hover:opacity-100",
     ].join(" ");
   };
+  
 
   const renderNavLinks = (isMobile = false) =>
     NAV_ITEMS.map((item) => (
