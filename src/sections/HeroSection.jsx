@@ -9,7 +9,7 @@ import { HERO_DATA } from "../constants/hero";
 export default function HeroSection() {
   return (
     <section
-      className=" py-8  md:px-8 sm:px-4  xl:mx-[100px]"
+      className=" py-8  md:px-8 sm:px-4 px-4  xl:mx-[100px]"
       id="hero"
       aria-label="قسم المقدمة - القهوة العربية الأصيلة"
     >
