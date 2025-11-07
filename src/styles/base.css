@@ -1,23 +1,31 @@
 @layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+  }
+
   body {
-    @apply bg-[--color-primary] text-[--color-paragraph];
     font-family: var(--font-main);
     direction: rtl;
     text-align: right;
-    background-image: url("../assets/images/bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
     overflow-x: hidden;
+    min-height: 100vh;
+    
+    /* احتفظ فقط باللون الأساسي كخلفية احتياطية */
+    /* background-color: var(--color-primary) !important; */
   }
 
   h1 {
-    font-size: clamp(
-      2rem,
-      4vw + 1rem,
-      4rem
-    ) !important; /* من 32px إلى 64px تقريبًا */
+    font-size: clamp(2rem, 4vw + 1rem, 4rem) !important;
     line-height: 1.2 !important;
     font-weight: 800 !important;
     mix-blend-mode: hard-light !important;
@@ -25,24 +33,32 @@
   }
 
   h3 {
-    font-size: clamp(
-      1rem,
-      1vw + 0.75rem,
-      1.75rem
-    ) !important; /* من 20px إلى 28px */
+    font-size: clamp(1rem, 1vw + 0.75rem, 1.75rem) !important;
     line-height: 1.4 !important;
     font-weight: 700 !important;
     color: var(--color-paragraph);
   }
 
   p {
-    font-size: clamp(
-      1rem,
-      0.8vw + 0.75rem,
-      1.5rem
-    ) !important; /* من 16px إلى 24px */
+    font-size: clamp(1rem, 0.8vw + 0.75rem, 1.5rem) !important;
     line-height: 1.5 !important;
     font-weight: 500 !important;
     color: var(--color-paragraph);
+  }
+
+  /* حلول لمشاكل الجوال */
+  @media (max-width: 768px) {
+    /* تحسين الأداء على الجوال */
+    .transform {
+      will-change: transform;
+    }
+  }
+
+  /* حل مشاكل safe area على الجوال */
+  @supports(padding: max(0px)) {
+    .safe-padding {
+      padding-left: max(1rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    }
   }
 }
