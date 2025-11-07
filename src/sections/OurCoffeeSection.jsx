@@ -9,7 +9,7 @@ export default function OurCoffeeSection() {
     <section
       id="our-coffee"
       aria-label="قسم قهوتنا الخاصة"
-      className="min-h-screen pl-4 sm:px-4 md:pl-8 lg:pl-[100px] py-8"
+      className="pl-4 sm:px-4 md:pl-8 lg:pl-[100px] py-8"
     >
       <div className="flex justify-between items-center flex-col md:flex-row">
         <img

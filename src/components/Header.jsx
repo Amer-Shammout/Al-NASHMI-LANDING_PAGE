@@ -42,7 +42,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-0 z-50 w-full w-full px-4 py-4 sm:px-8 sm:py-6 xl:px-[100px] xl:py-[40px] transition-all duration-300 ${
+    <header className={`fixed top-0 z-50 w-full px-4 py-4 sm:px-8 sm:py-6 xl:px-[100px] xl:py-[40px] transition-all duration-300 ${
   isScrolled 
     ? 'bg-[rgba(96,96,96,0.2)] backdrop-blur-sm shadow-lg' 
     : 'bg-[rgba(96,96,96,0.2)]'

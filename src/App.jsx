@@ -6,6 +6,7 @@ import HeroSection from "./sections/HeroSection";
 import OurCoffeeSection from "./sections/OurCoffeeSection";
 import CoffeeTypesSection from "./sections/CoffeeTypesSection";
 import AboutSection from "./sections/AboutSection";
+import ContactSection from "./sections/ContactSection";
 
 function App() {
   return <MainLayout >
@@ -13,6 +14,7 @@ function App() {
     <OurCoffeeSection/>
     <CoffeeTypesSection/>
     <AboutSection/>
+    <ContactSection/>
   </MainLayout>;
 }
 
