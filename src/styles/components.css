@@ -30,4 +30,15 @@
     background-color: transparent;
     mix-blend-mode: hard-light;
   }
+
+  .navLink {
+    font-size: clamp(1rem, 0.5vw + 0.75rem, 1.25rem); /* من 16px إلى 20px */
+    font-weight: 500;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+  }
+
+  .navLink:hover {
+    font-weight: 700;
+  }
 }

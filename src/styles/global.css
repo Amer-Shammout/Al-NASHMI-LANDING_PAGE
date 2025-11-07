@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./variables.css";
 @import "./base.css";
+@import "./components.css";
 
 /* إعداد الخطوط */
 @font-face {
