@@ -67,7 +67,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // دالة محسنة للكلاسات - الحل الجذري
   const getNavLinkClasses = (sectionId) => {
     const isActive = activeSection === sectionId;
   
