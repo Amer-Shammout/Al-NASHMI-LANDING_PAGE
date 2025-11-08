@@ -7,4 +7,6 @@ import svgr from "vite-plugin-svgr";
 export default defineConfig({
   plugins: [react(), tailwindcss(), svgr()],
   base: "/Al-NASHMI-LANDING_PAGE/", 
+  // base: "./", // ✅ استخدم ./ أثناء الاختبار المحلي
+
 });
