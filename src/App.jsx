@@ -20,7 +20,7 @@ function App() {
 
     const img = new Image();
     
-    img.src = bgImage; // استخدام الصورة المستوردة مباشرة
+    img.src = `${import.meta.env.BASE_URL}assets/images/bg.png`;
 
     img.onload = () => {
       console.log('✅ تم تحميل الخلفية بنجاح');
