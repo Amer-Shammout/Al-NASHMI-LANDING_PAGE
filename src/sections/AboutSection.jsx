@@ -15,8 +15,8 @@ export default function AboutSection() {
       className=" px-4 sm:px-4 md:px-8 lg:px-[100px] py-8 relative"
     >
       <div className="flex justify-between items-center flex-col-reverse md:flex-row">
-        <AnimatedSection direction="left" delay={0.2}>
-          <SectionDetails className="md:w-1/2" data={ABOUT_DATA} />
+        <AnimatedSection className="md:w-1/2" direction="left" delay={0.2}>
+          <SectionDetails data={ABOUT_DATA} />
         </AnimatedSection>
 
         <AnimatedImage

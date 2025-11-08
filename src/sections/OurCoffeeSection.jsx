@@ -11,7 +11,7 @@ export default function OurCoffeeSection() {
   return (
     <section
       id="our-coffee"
-      aria-label="قسم قهوتنا الخاصة"
+      aria-label="قسم قهوتنا"
       className="relative pl-4 sm:px-4 md:pl-8 lg:pl-[100px] py-8"
     >
       <img
@@ -24,7 +24,7 @@ export default function OurCoffeeSection() {
         <AnimatedImage
           direction="left"
           src={OUR_COFFEE_DATA.image}
-          alt="ملعقة قهوة تدخل من يمين الشاشة"
+          alt="ملعقة قهوة"
           className="object-contain md:w-1/2 sm:translate-x-40 translate-x-28 md:translate-0 sm:relative"
         />
         <AnimatedSection direction="none" delay={0.2}>
@@ -33,7 +33,7 @@ export default function OurCoffeeSection() {
       </div>
       <img
         src={spoon}
-        className="-z-1000 left-0 -bottom-10  absolute w-[50px] "
+        className="-z-1000 left-0 -bottom-10  absolute w-[50px] md:w-20"
         loading="lazy"
       />
     </section>
